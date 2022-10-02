@@ -1,0 +1,14 @@
+def solution(triangle):
+    answer = 0
+    # [3, 8], [8, 1, 0]
+    for idx in range(len(triangle) - 1):
+        tmp_arr1 = triangle[idx]
+        tmp_arr2 = triangle[idx + 1]
+
+        tmp_arr2[0] += tmp_arr1[0]
+        tmp_arr2[-1] += tmp_arr1[-1]
+
+        for i in range(1, len(tmp_arr2) - 1):
+            tmp_arr2[i] += max(tmp_arr1[i], tmp_arr1[i - 1])
+    answer = max(tmp_arr2)
+    return answer
