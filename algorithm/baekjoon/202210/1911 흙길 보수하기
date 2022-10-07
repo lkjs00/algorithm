@@ -1,0 +1,21 @@
+N, L = map(int, input().split())
+water = []
+answer = 0
+for TC in range(N):
+    s, e = map(int, input().split())
+    water.append((s, e))
+water.sort()
+
+now = 0
+while water:
+    start, end = water.pop(0)
+    if now > start:
+        start = now
+    if (end - start) % L == 0:
+        answer += (end - start) // L
+        now = start + ((end - start) // L) * L
+    else:
+        answer += ((end - start) // L) + 1
+        now = start + (((end - start) // L) + 1) * L
+
+print(answer)
