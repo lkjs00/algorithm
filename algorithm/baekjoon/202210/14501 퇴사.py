@@ -11,6 +11,7 @@ for i in range(N):
         if DP[i] + work[i][1] > DP[i + work[i][0]]:
             DP[i + work[i][0]] = DP[i] + work[i][1]
         else:
+            pass
 
 
 print(DP)
