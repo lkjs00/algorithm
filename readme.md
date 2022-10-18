@@ -1,2 +1,3 @@
 algorithm
 10/16 TEST
+10/18 BOOK STUDY
