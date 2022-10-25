@@ -1,1 +1,3 @@
-M, N, K = map(int, input().split())
+X = 'John ate an apple Oh John'
+
+print(X.split())
