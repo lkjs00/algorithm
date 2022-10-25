@@ -1,1 +1,4 @@
 algorithm
+10/16 TEST
+10/18 BOOK STUDY
+10/21 TEST
